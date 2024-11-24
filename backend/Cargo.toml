@@ -1,0 +1,20 @@
+[workspace]
+members = ["./nbody", "./ws-server", "./wasm-nbody"]
+resolver = "2"
+
+[workspace.dependencies]
+nbody = { path = "./nbody" }
+ws-server = { path = "./ws-server" }
+wasm-nbody = { path = "./wasm" }
+
+[profile.release]
+opt-level = 3
+debug = false
+strip = "none"
+debug-assertions = false
+overflow-checks = false
+lto = "thin"
+panic = 'unwind'
+incremental = false
+codegen-units = 16
+rpath = false
