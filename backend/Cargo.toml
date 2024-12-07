@@ -1,11 +1,11 @@
 [workspace]
-members = ["./nbody", "./ws-server", "./wasm-nbody"]
+members = ["./nbody", "./ws-server", "./wasm-bindings"]
 resolver = "2"
 
 [workspace.dependencies]
 nbody = { path = "./nbody" }
 ws-server = { path = "./ws-server" }
-wasm-nbody = { path = "./wasm" }
+wasm-bindings = { path = "./wasm-bindings" }
 
 [profile.release]
 opt-level = 3
